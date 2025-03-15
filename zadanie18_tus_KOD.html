@@ -1,0 +1,63 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="kod" cols="110" rows="40" readonly>
+
+    <!DOCTYPE html>
+    <head>
+        <title> Użycie fukcji </title>
+    <meta charset="utf-8">
+    </head>
+    <body>
+    <div style="color:navy;font-size:50px;">
+        <script language="JavaScript">
+            var a=parseFloat(prompt("a=",""));
+            var b=parseFloat(prompt("b=",""));
+    
+            function suma_tus(a, b) 
+            {
+            return a + b;
+            }
+            function odejmowanie_tus(a, b) 
+            {
+            return a - b;
+            }
+            function mnożenie_tus(a, b) 
+            {
+            return a * b;
+            }
+            function od_kwadratu_tus(a, b) 
+            {
+            return a*a;
+            return b*b;
+            }
+            function reszta_z_dzielenia_a_przez_b_tus(a, b) 
+            {
+            return a%b;
+            }
+       
+            document.write("suma= "+suma_tus(a,b)+"<br>");
+            document.write("odejmowanie= "+odejmowanie_tus(a,b)+"<br>");
+            document.write("mnożenie= "+mnożenie_tus(a,b)+"<br>");
+            document.write("od kwadratu= "+a+"^2="+od_kwadratu_tus(a)+"   "+b+"^2="+od_kwadratu_tus(b)+"<br>");
+            document.write("reszta z dzielenia a przez b= "+reszta_z_dzielenia_a_przez_b_tus(a,b)+"<br>");
+        </script>
+    </div>
+    </body>
+    </html>
+
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

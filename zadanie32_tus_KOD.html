@@ -1,0 +1,49 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="kod" cols="100" rows="63" readonly>
+  
+    <html>
+        <head>
+        <script type="text/javascript">
+        function Wiezowiec(wysokosc_k,ile_pieter,adres)//początek konstruktora
+       {
+       this.wysokosc=wysokosc_k;
+       this.ile_pieter=ile_pieter;
+       this.adres=adres;
+       }//koniec konstruktora
+        Wiezowiec.prototype.wypisz = function () //definicja metody
+        {
+        alert(this.wysokosc + ' ' + this.ile_pieter+ ' ' + this.adres);
+        };
+       var budynek1 = new Wiezowiec("100m", "5", "Mickiewicza 160"); // nowy obiekt budynek1
+       var budynek2 = new Wiezowiec('200m', '10', 'Kościuszki 171');
+       budynek1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+       budynek2.wypisz();
+        document.write("dostęp do właściwości"+"<br>");
+       // poniżej dostęp do pól osoby1
+        document.write("Wiezowiec pierwszy"+" "+budynek1.wysokosc+" "+budynek1.ile_pieter+" "+budynek1.adres);
+        document.write("Wiezowiec drugi"+" "+budynek2.wysokosc+" "+budynek2.ile_pieter+" "+budynek2.adres);
+        </script>
+        </head>
+       <body>
+       <br>
+        programowanie obiektowe
+       </body>
+       </html>
+       
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

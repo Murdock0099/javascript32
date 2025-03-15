@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+    <title>Wszystko o TRÓJKĄCIE</title>
+</head>
+<body>
+    <h1>Wszystko o TRÓJKĄCIE</h1><br><br>
+    <form>
+        Punkt A: <input type="text" id="xa_tus" placeholder="xa_tus"> <input type="text" id="ya_tus" placeholder="ya_tus"><br><br>
+        Punkt B: <input type="text" id="xb_tus" placeholder="xb_tus"> <input type="text" id="yb_tus" placeholder="yb_tus"><br><br>
+        Punkt C: <input type="text" id="xc_tus" placeholder="xc_tus"> <input type="text" id="yc_tus" placeholder="yc_tus"><br><br>
+        <input type="button" name="AB" value="Oblicz AB" onclick="AB_tus
+        ()"><br><br>
+        <input type="button" name="BC" value="Oblicz BC" onclick="BC_tus
+        ()"><br><br>
+        <input type="button" name="AC" value="Oblicz AC" onclick="AC_tus
+        ()"><br><br>
+    </form>
+    <div style="color:red;font-size:20px;" id="wynik"></div>
+    <script type="text/javascript">
+        function AB_tus
+        () {
+            var xa = parseFloat(document.getElementById('xa_tus').value);
+            var ya = parseFloat(document.getElementById('ya_tus').value);
+            var xb = parseFloat(document.getElementById('xb_tus').value);
+            var yb = parseFloat(document.getElementById('yb_tus').value);
+            var ab = Math.sqrt(Math.pow((xb - xa), 2) + Math.pow((yb - ya), 2));
+            document.getElementById("wynik").innerHTML = "Długość AB = " + ab.toFixed(2) + " cm";
+        }
+
+        function BC_tus
+        () {
+            var xb = parseFloat(document.getElementById('xb_tus').value);
+            var yb = parseFloat(document.getElementById('yb_tus').value);
+            var xc = parseFloat(document.getElementById('xc_tus').value);
+            var yc = parseFloat(document.getElementById('yc_tus').value);
+            var bc = Math.sqrt(Math.pow((xc - xb), 2) + Math.pow((yc - yb), 2));
+            document.getElementById("wynik").innerHTML = "Długość BC = " + bc.toFixed(2) + " cm";
+        }
+
+        function AC_tus
+        () {
+            var xa = parseFloat(document.getElementById('xa_tus').value);
+            var ya = parseFloat(document.getElementById('ya_tus').value);
+            var xc = parseFloat(document.getElementById('xc_tus').value);
+            var yc = parseFloat(document.getElementById('yc_tus').value);
+            var ac = Math.sqrt(Math.pow((xc - xa), 2) + Math.pow((yc - ya), 2));
+            document.getElementById("wynik").innerHTML = "Długość AC = " + ac.toFixed(2) + " cm";
+        }
+    </script>
+</body>
+</html>
