@@ -1,0 +1,43 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="kod" cols="100" rows="63" readonly>
+    
+
+    <html>
+        <head>
+            <meta charset="utf-8">
+        </head>
+        <body>
+            <div style="font-size: 50px;">
+                <script language="JavaScript">
+                    var rok_tus = prompt("Podaj rok, od którego roku działa JavaScript:", "");
+                    var rok_javascript = 1995; 
+        
+                    document.write("Wczytany rok = " + rok_tus + "<br>");
+        
+                    if (parseInt(rok_tus) === rok_javascript) {
+                        document.write("<font color='blue' size='4'>Brawo, znasz rok, od kiedy działa JavaScript!</font><br>");
+                    } else {
+                        document.write("<font color='red' size='7'>Źle, musisz jeszcze poczytać!</font><br>");
+                    }
+                </script>
+            </div>
+        </body>
+        </html>
+
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
